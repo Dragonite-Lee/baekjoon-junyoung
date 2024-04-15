@@ -8,6 +8,7 @@
 
 3. 자료구조
 - 문자열을 저장할 str[]
+- 첫 번째 문자열을 저장할 str[]
 - 문자열을 이어붙일 str
 """
 # 3
@@ -21,12 +22,22 @@ N = int(input())
 
 value_list = []
 str = ''
-firstStr = ''
+firstStr = []
+
 for _ in range(N):
     b = input()
     value_list.append(b)
 
 for i in range(len(value_list[0])):
-    for j in value_list:
-        if 
-        if j[i]
+    firstStr.append(value_list[0][i])
+    for item in value_list:
+        if firstStr[i] != item[i]:
+            str += "?"
+            break
+    else: # for - else 문으로 break로 나오지 않을경우 실행된다. 현재 break로 나온다는건 문자가 다르다는 의미로 ?를 출력하면 됨
+        if firstStr[i] == ".":
+            str += "."
+        else:
+            str += firstStr[i]
+
+print(str)
