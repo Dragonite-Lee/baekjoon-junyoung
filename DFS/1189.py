@@ -35,6 +35,6 @@ def DFS(y,x):
         tree[ey][ex] = tree[y][x] + 1
         DFS(ey,ex)
         tree[ey][ex] = '.'
-
+print(tree)
 DFS(R-1, 0)
 print(result)

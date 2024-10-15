@@ -32,26 +32,21 @@ def dfs(y, x):
   dx = [1, 0, -1, 0]
   dy = [0, 1, 0, -1]
 
-  for k in range(4):
-    nx = x + dx[k]
-    ny = y + dy[k]
-
+  for i in range(4):
+    ny = y + dy[i]
+    nx = x + dx[i]
+    
     if 0 <= ny < N and 0 <= nx < N:
       if map[ny][nx] == 1 and visited[ny][nx] == False:
         visited[ny][nx] = True
         dfs(ny, nx)
 
-
-for j in range(N):
-  for i in range(N):
-    if map[j][i] == 1 and visited[j][i] == False:
-      #방문 바꾸기
-      visited[j][i] = True
-      #재귀함수 돌려서 갯수나온거 리스트에 추가
-      #BFS : 함수 호출, 리턴값으로 크기받아옴 
-      #DFS : 전역변수 사용이 편함
+for i in range(N):
+  for j in range(N):
+    if visited[i][j] == False and map[i][j] == 1:
+      visited[i][j] = True
       each = 0
-      dfs(j,i)
+      dfs(i,j)
       result.append(each)
 
 result.sort()

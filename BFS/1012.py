@@ -37,7 +37,7 @@ for _ in range(T):
           if tree[ey][ex] == 1 and visited[ey][ex] == False:
             visited[ey][ex] = True
             q.append((ey,ex))
-            
+
   for i in range(N):
     for j in range(M):
       if tree[i][j] == 1 and visited[i][j] == False:

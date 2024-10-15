@@ -22,7 +22,7 @@ input = sys.stdin.readline
 N, M, V = map(int, input().split())
 
 graph = [[False] * (N+1) for _ in range(N+1)] # 간선 연결용 그래프
-
+print(graph)
 visited_dfs = [False] * (N+1)
 visited_bfs = [False] * (N+1)
 
