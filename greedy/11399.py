@@ -13,4 +13,12 @@ input = sys.stdin.readline
 
 N = int(input())
 time = list(map(int, input().split()))
-print(time)
+# print(time)
+time.sort()
+sum = 0
+result = 0
+for i in time:
+  sum += i
+  result += sum
+
+print(result)
