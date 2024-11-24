@@ -1,3 +1,2 @@
- i < N; i++) {
-//   if (sum[i])
-// }
+
+for (word of arr) {

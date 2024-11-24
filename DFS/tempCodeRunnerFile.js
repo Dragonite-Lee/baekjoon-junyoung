@@ -1,1 +1,1 @@
-  visited[y][x] = 0;
+next_s
