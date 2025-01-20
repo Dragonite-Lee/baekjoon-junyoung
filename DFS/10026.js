@@ -41,7 +41,7 @@ function bfs(y, x, visited, target, bool) {
       const ny = py + dy[i];
       const nx = px + dx[i];
 
-      if (0 <= ny && ny < N && 0 <= nx && nx < N && visited[ny][nx] === false) {
+      if (ç && visited[ny][nx] === false) {
         if (bool) {
           if (target === 'B') {
             if (graph[ny][nx] === target) {
