@@ -1,2 +1,2 @@
 
-    now = Math.abs(sum)
+  .readFileSync('./js/input.txt')

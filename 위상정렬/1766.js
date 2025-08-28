@@ -85,8 +85,6 @@ const [input, ...arr] = fs
   .split('\n')
   .map((line) => line.split(' ').map(Number));
 
-
-
 N = input[0];
 M = input[1];
 
@@ -121,3 +119,43 @@ while (!start.isEmpty()) {
 }
 
 console.log(...result);
+
+class MinHeap {
+  constructor() {
+    this.heap = [];
+  }
+  getSize() {
+    return this.heap.length;
+  }
+  insert(v) {
+    this.heap.push(v);
+    this._bubbleUp(this.heap.length - 1);
+  }
+  remove() {
+    if (!this.heap.length) return null;
+    const min = this.heap[0];
+    this.heap[0] = this.heap.pop();
+    if (this.heap.length) this._bubbleDown(0);
+    return min;
+  }
+  _bubbleUp(i) {
+    while (i > 0) {
+      let p = Math.floor((i - 1) / 2);
+      if (this.heap[p] <= this.heap[i]) break;
+      [this.heap[p], this.heap[i]] = [this.heap[i], this.heap[p]];
+      i = p;
+    }
+  }
+  _bubbleDown(i) {
+    while (true) {
+      let s = i,
+        l = 2 * i + 1,
+        r = 2 * i + 2;
+      if (l < this.heap.length && this.heap[l] < this.heap[s]) s = l;
+      if (r < this.heap.length && this.heap[r] < this.heap[s]) s = r;
+      if (s === i) break;
+      [this.heap[i], this.heap[s]] = [this.heap[s], this.heap[i]];
+      i = s;
+    }
+  }
+}
