@@ -1,2 +1,0 @@
-
-          qu.push([ny, nx]);

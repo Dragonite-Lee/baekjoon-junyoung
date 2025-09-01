@@ -1,0 +1,13 @@
+{
+  "editor.quickSuggestions": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.suggestOnTriggerCharacters": false,
+  "javascript.suggest.autoImports": false,
+  "typescript.suggest.autoImports": false,
+  "[javascript]": {
+    "editor.quickSuggestions": false
+  },
+  "[typescript]": {
+    "editor.quickSuggestions": false
+  }
+}
