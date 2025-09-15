@@ -1,2 +1,0 @@
-
-  .readFileSync('./js/input.txt')
